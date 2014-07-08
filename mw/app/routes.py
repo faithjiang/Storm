@@ -7,6 +7,10 @@ app = Flask(__name__)
 def home():
     return "hi"
 
+@app.route('/template')
+def staticPage():
+    return render_template("hello.html")
+
 @app.route('/write', methods=['POST'])
 def write():
     res = request.get_json(force=True)
