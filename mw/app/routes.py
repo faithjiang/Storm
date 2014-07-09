@@ -11,6 +11,10 @@ def home():
 def staticPage():
     return render_template("hello.html")
 
+@app.route('/welcome')
+def welcomePage():
+    return render_template("welcome.html")
+
 @app.route('/write', methods=['POST'])
 def write():
     res = request.get_json(force=True)
