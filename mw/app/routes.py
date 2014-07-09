@@ -17,6 +17,17 @@ def write():
     print(res)
     return "success"
 
+@app.route('/createNode', methods=['POST'])
+def createNode():
+    jsonReq = request.get_json(force=True)
+    app.logger.info(jsonReq)
+
+    node = jsonReq["node"]
+    x = node["x"]
+    app.logger.info(x)
+
+    return "success!!"
+
 @app.route('/receive')
 def receive():
     message = {
