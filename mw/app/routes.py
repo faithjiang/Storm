@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import json
 
 app = Flask(__name__)      
@@ -14,6 +14,19 @@ def staticPage():
 @app.route('/welcome')
 def welcomePage():
     return render_template("welcome.html")
+
+@app.route('/login', methods=['GET', 'POST'])
+def loginPage():
+    error = None
+    if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+        app.logger.info("username: " + username + " password: " + password)
+        if (username == "admin") or (password == "admin"):
+            return redirect(url_for("home"))
+        else:
+            error = "invalid credentials"
+    return render_template("login.html", error=error)
 
 @app.route('/write', methods=['POST'])
 def write():
