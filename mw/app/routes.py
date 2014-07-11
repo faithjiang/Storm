@@ -15,6 +15,12 @@ def staticPage():
 def welcomePage():
     return render_template("welcome.html")
 
+@app.route('/height')
+def heightPage():
+    height = queryHeight()
+    app.logger.info("height: " + str(height))
+    return render_template("height.html", height=height)
+
 @app.route('/login', methods=['GET', 'POST'])
 def loginPage():
     error = None
@@ -53,6 +59,10 @@ def receive():
     }
     jsonMessage = json.dumps(message)
     return jsonMessage
+
+def queryHeight():
+    height = 3
+    return height
 
 if __name__ == '__main__':
   app.run(debug=True)
