@@ -61,7 +61,7 @@ def receive():
     return jsonMessage
 
 def queryHeight():
-    height = 3
+    height = 2
     return height
 
 if __name__ == '__main__':
