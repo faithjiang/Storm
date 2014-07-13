@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from time import gmtime, strftime
 import json
 
 app = Flask(__name__)      
@@ -20,6 +21,12 @@ def heightPage():
     height = queryHeight()
     app.logger.info("height: " + str(height))
     return render_template("height.html", height=height)
+
+@app.route('/date')
+def dateNow():
+    date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+    app.logger.info("date: " + date)
+    return render_template("date.html", date=date)
 
 @app.route('/login', methods=['GET', 'POST'])
 def loginPage():
