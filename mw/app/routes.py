@@ -47,6 +47,15 @@ def write():
     print(res)
     return "success"
 
+@app.route('/json')
+def returnJson():
+    message = {
+        "name": "Edward Han",
+        "age": 23
+    }
+    jsonMessage = json.dumps(message)
+    return render_template("json.html", msg=message)
+
 @app.route('/createNode', methods=['POST'])
 def createNode():
     jsonReq = request.get_json(force=True)
