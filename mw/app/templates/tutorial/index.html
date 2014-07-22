@@ -36,42 +36,42 @@
                 <div class="span3 no-tablet-portrait">
                     <nav>
                         <ul class="side-menu">
-                            <li><a href="#_checkbox">Student Info</a></li>
-                            <li><a href="#_radio">Courses</a></li>
+                            <li><a href="#_studentInfo">Student Info</a></li>
+                            <li><a href="#_courses">Courses</a></li>
                         </ul>
                     </nav>
                 </div>
 
                 <div class="span9">
-                <form action="/summary" method="get">
-                    <h2 id="_default"></i>Student Info</h2>
+                <form action="/summary" method="post">
+                    <h2 id="_studentInfo"></i>Student Info</h2>
                     <div class="example">
                         <fieldset>
                             <label>First Name</label>
                             <div class="input-control text" data-role="input-control">
-                                <input type="text" placeholder="type text">
+                                <input type="text" placeholder="First Name" name="firstname">
                             </div>
 
                             <label>Last Name</label>
                             <div class="input-control password" data-role="input-control">
-                                <input type="text" placeholder="text" autofocus>
+                                <input type="text" placeholder="Last Name" name="lastname">
                             </div>
 
                             <label>Department</label>
                             <div class="input-control password" data-role="input-control">
-                                <input type="text" placeholder="text" autofocus>
+                                <input type="text" placeholder="Department" name="department">
                             </div>
 
                             <label>Year</label>
                             <div class="input-control password" data-role="input-control">
-                                <input type="text" placeholder="text" autofocus>
+                                <input type="text" placeholder="text" name="year">
                             </div>
                         </fieldset>
                     </div> <br>
 
 
 
-                    <h2 id="_checkbox"></i>Courses</h2>
+                    <h2 id="_courses"></i>Courses</h2>
                     <p class="description">
 
                     </p>
@@ -79,17 +79,17 @@
                         <fieldset>
                             <label>Course 1</label>
                             <div class="input-control text" data-role="input-control">
-                                <input type="text" placeholder="type text">
+                                <input type="text" placeholder="course 1" name="course1">
                             </div>
 
                             <label>Course 2</label>
                             <div class="input-control text" data-role="input-control">
-                                <input type="text" placeholder="type text">
+                                <input type="text" placeholder="course 2" name="course2">
                             </div>
 
                             <label>Course 3</label>
                             <div class="input-control text" data-role="input-control">
-                                <input type="text" placeholder="type text">
+                                <input type="text" placeholder="course 3" name="course3">
                             </div>
                         </fieldset>
                     </div> <br>
