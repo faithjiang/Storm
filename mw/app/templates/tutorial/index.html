@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link href="static/css/metro-bootstrap.css" rel="stylesheet">
+    <link href="static/css/metro-bootstrap-responsive.css" rel="stylesheet">
+    <link href="static/css/iconFont.css" rel="stylesheet">
+    <link href="static/css/docs.css" rel="stylesheet">
+    <link href="static/js/prettify/prettify.css" rel="stylesheet">
+
+    <!-- Load JavaScript Libraries -->
+    <script src="static/js/jquery/jquery.min.js"></script>
+    <script src="static/js/jquery/jquery.widget.min.js"></script>
+    <script src="static/js/jquery/jquery.mousewheel.js"></script>
+    <script src="static/js/prettify/prettify.js"></script>
+
+    <!-- Metro UI CSS JavaScript plugins -->
+    <script src="static/js/load-metro.js"></script>
+
+    <!-- Local JavaScript -->
+    <script src="static/js/docs.js"></script>
+
+    <title>Student Registration</title>
+</head>
+<body class="metro">
+    <div class="container">
+        <h1>
+            Course Registration<small class="on-right">Fall 2014</small> <br>
+        </h1>
+
+        <div class="grid">
+            <div class="row">
+                <div class="span3 no-tablet-portrait">
+                    <nav>
+                        <ul class="side-menu">
+                            <li><a href="#_checkbox">Student Info</a></li>
+                            <li><a href="#_radio">Courses</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="span9">
+                <form action="/summary" method="get">
+                    <h2 id="_default"></i>Student Info</h2>
+                    <div class="example">
+                        <fieldset>
+                            <label>First Name</label>
+                            <div class="input-control text" data-role="input-control">
+                                <input type="text" placeholder="type text">
+                            </div>
+
+                            <label>Last Name</label>
+                            <div class="input-control password" data-role="input-control">
+                                <input type="text" placeholder="text" autofocus>
+                            </div>
+
+                            <label>Department</label>
+                            <div class="input-control password" data-role="input-control">
+                                <input type="text" placeholder="text" autofocus>
+                            </div>
+
+                            <label>Year</label>
+                            <div class="input-control password" data-role="input-control">
+                                <input type="text" placeholder="text" autofocus>
+                            </div>
+                        </fieldset>
+                    </div> <br>
+
+
+
+                    <h2 id="_checkbox"></i>Courses</h2>
+                    <p class="description">
+
+                    </p>
+                    <div class="example">
+                        <fieldset>
+                            <label>Course 1</label>
+                            <div class="input-control text" data-role="input-control">
+                                <input type="text" placeholder="type text">
+                            </div>
+
+                            <label>Course 2</label>
+                            <div class="input-control text" data-role="input-control">
+                                <input type="text" placeholder="type text">
+                            </div>
+
+                            <label>Course 3</label>
+                            <div class="input-control text" data-role="input-control">
+                                <input type="text" placeholder="type text">
+                            </div>
+                        </fieldset>
+                    </div> <br>
+                    <input type="submit" value="Submit" class="button success" align="right">
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
